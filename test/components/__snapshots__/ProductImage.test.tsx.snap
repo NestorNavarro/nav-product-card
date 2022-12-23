@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductImg should to show a img prop 1`] = `
+<img
+  alt=""
+  className="productImg "
+  src="https://test.jpg"
+/>
+`;
+
+exports[`ProductImg should to show img product into the component 1`] = `
+<div
+  className="productCard undefined"
+>
+  <img
+    alt=""
+    className="productImg "
+    src="./coffe-mug.png"
+  />
+</div>
+`;

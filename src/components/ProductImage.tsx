@@ -14,17 +14,22 @@ export interface ProductImageProps {
 
 export const ProductImage = ({ img = "", title = "", className = "", style } : ProductImageProps) => {
     const { product } = useContext(ProductContext);
+    let imgToShow: string;
 
-    let imgToShow = img ? img : product.img;
-
-    let titleToShow =  title ? title : product.title ;
+    if ( img ) {
+        imgToShow = img;
+    } else if ( product.img ) {
+        imgToShow = product.img
+    } else {
+        imgToShow = noImg;
+    }
 
     return (
         <img 
             style={style}
             className={`${stylesCss.productImg} ${className}`}
             src={imgToShow ? imgToShow : noImg}
-            alt={titleToShow ? titleToShow : "No image"}
+            alt={title}
         />
     )
 }
